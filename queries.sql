@@ -80,16 +80,38 @@ which could increase revenue without depending heavily on a few premium outliers
 
 -- =====================================================
 -- QUESTION 3: Who are the top 10 customers by order frequency?
+-- NOTE: Displays CustomerID instead of customer names (JOIN not yet covered)
 -- =====================================================
 
--- [Query to be added]
+SELECT 
+    Orders.CustomerID AS 'Customer', 
+    COUNT(Orders.OrderID) AS 'Number of Order'
+FROM Orders
+GROUP BY Orders.CustomerID
+ORDER BY COUNT(Orders.OrderID) DESC
+LIMIT 10;
 
 /* 
 INSIGHT:
+Customer ID 20 is the clear leader with 10 orders, representing the most engaged customer in our database. 
+Three customers (IDs 87, 65, and 63) follow with 7 orders each, forming a strong second tier. 
+
+The top 10 customers collectively placed 60 orders, showing significant order concentration among a small group of high-value 
+repeat customers. There's a notable decline from 10 orders (rank #1) to 4 orders (rank #10), indicating a steep drop-off in engagement beyond our most loyal customers. 
+
+This pattern suggests a small but highly engaged core customer base with opportunity to improve mid-tier customer retention.
 */
 
 /*
 RECOMMENDATION:
+Implement a VIP loyalty program for the top 10 customers (IDs 20, 87, 65, 63, etc.) offering exclusive benefits such as priority support, 
+early access to new products, or volume discounts to maintain their engagement and prevent churn to competitors. 
+
+The marketing team should analyze purchase patterns of Customer 20 (10 orders) to identify success factors and replicate them with customers in the 4-7 order range 
+to move them into the top tier. 
+
+Additionally, develop a re-engagement campaign targeting customers with only 1-3 orders to understand barriers to repeat purchases and convert them into frequent 
+buyers, thereby reducing the steep drop-off we see in the current customer base.
 */
 
 
@@ -97,17 +119,40 @@ RECOMMENDATION:
 -- QUESTION 4: Which products are priced above the overall average?
 -- =====================================================
 
--- [Query to be added]
+SELECT Products.ProductName, Products.Price
+FROM Products
+WHERE Products.Price > (SELECT AVG(Products.Price) FROM Products)
+ORDER BY Products.Price DESC;
 
--- INSIGHT: 
--- RECOMMENDATION: 
+/* 
+INSIGHT:
+The results show that most products priced above the average fall in the 30 to 63 range, while Côte de Blaye (263.50), Thüringer Rostbratwurst (123.79), Mishi Kobe Niku (97.00), 
+and Sir Rodney's Marmalade (81.00) stand out as extreme outliers far above the average price of 28.87. 
+
+This suggests that the catalog is dominated by affordable mid priced products, with only a few premium items driving up the overall average. 
+The sharp difference raises questions about whether these premium prices are tied to category value, import costs, or inconsistent pricing strategy.
+*/
+
+/*
+RECOMMENDATION:
+The product team should review the top priced items, especially Côte de Blaye and Thüringer Rostbratwurst, to confirm whether their high pricing aligns with demand, cost structure, 
+and intended market positioning. 
+
+If these items truly serve a premium segment, marketing can highlight them as specialty products to capture higher margin sales. 
+For the larger group of mid priced items, the business can explore small, strategic price adjustments or bundled offers to lift revenue without disrupting the affordability of the core catalog.
+*/
 
 
 -- =====================================================
 -- QUESTION 5: Are there customers who have never placed an order?
 -- =====================================================
 
--- [Query to be added]
+SELECT Customers.CustomerID, Customers.CustomerName
+FROM Customers
+WHERE Customers.CustomerID NOT IN (
+    SELECT DISTINCT Orders.CustomerID 
+    FROM Orders)
+ORDER BY CAST(Customers.CustomerID AS UNSIGNED) ASC;
 
 -- INSIGHT: 
 -- RECOMMENDATION:
