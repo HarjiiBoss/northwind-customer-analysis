@@ -39,9 +39,8 @@ accounting for 69% of the top 5 markets.
 
 Brazil (9) and UK (7) show moderate presence. 
 This indicates strong market concentration in North America and Western Europe.
-*/
 
-/*
+
 RECOMMENDATION:
 Prioritize marketing investments in the top 3 markets (USA, Germany, France) where we have proven customer base and strongest presence. 
 
@@ -65,9 +64,8 @@ This is a large 870 percent difference between the cheapest and most expensive p
 
 The average price is 28.87, which sits much closer to the minimum price. This tells us that most products are low to mid priced, while only a few items are in the premium range.
 This pattern suggests that the business operates mainly in a budget to mid tier market rather than a high end market.
-*/
 
-/*
+
 RECOMMENDATION:
 The product team should review premium priced items above 70 to confirm they justify their margin and are not overpriced relative to the rest of the catalog.
 
@@ -100,9 +98,8 @@ The top 10 customers collectively placed 60 orders, showing significant order co
 repeat customers. There's a notable decline from 10 orders (rank #1) to 4 orders (rank #10), indicating a steep drop-off in engagement beyond our most loyal customers. 
 
 This pattern suggests a small but highly engaged core customer base with opportunity to improve mid-tier customer retention.
-*/
 
-/*
+
 RECOMMENDATION:
 Implement a VIP loyalty program for the top 10 customers (IDs 20, 87, 65, 63, etc.) offering exclusive benefits such as priority support, 
 early access to new products, or volume discounts to maintain their engagement and prevent churn to competitors. 
@@ -131,9 +128,8 @@ and Sir Rodney's Marmalade (81.00) stand out as extreme outliers far above the 
 
 This suggests that the catalog is dominated by affordable mid priced products, with only a few premium items driving up the overall average. 
 The sharp difference raises questions about whether these premium prices are tied to category value, import costs, or inconsistent pricing strategy.
-*/
 
-/*
+
 RECOMMENDATION:
 The product team should review the top priced items, especially Côte de Blaye and Thüringer Rostbratwurst, to confirm whether their high pricing aligns with demand, cost structure, 
 and intended market positioning. 
@@ -147,12 +143,23 @@ For the larger group of mid priced items, the business can explore small, strate
 -- QUESTION 5: Are there customers who have never placed an order?
 -- =====================================================
 
-SELECT Customers.CustomerID, Customers.CustomerName
+SELECT 
+    Customers.CustomerID, 
+    Customers.CustomerName,
+    Customers.Country
 FROM Customers
 WHERE Customers.CustomerID NOT IN (
     SELECT DISTINCT Orders.CustomerID 
     FROM Orders)
 ORDER BY CAST(Customers.CustomerID AS UNSIGNED) ASC;
 
--- INSIGHT: 
--- RECOMMENDATION:
+/* 
+INSIGHT:
+There are 17 customers who have never placed an order, with the highest concentration in Europe (9 customers) and Latin America (8 customers). 
+These inactive customers represent untapped revenue potential across multiple regions.
+
+RECOMMENDATION:
+Launch targeted re-engagement campaigns prioritized by region, focusing first on Europe and Latin America where inactive customer concentrations are highest. 
+Consider region-specific promotional offers or outreach to understand barriers to their first purchase.
+*/
+
