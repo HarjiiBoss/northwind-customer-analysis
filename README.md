@@ -1,3 +1,6 @@
+![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
+![Status](https://img.shields.io/badge/Status-Complete-success)
+
 # Northwind Database - Customer & Product Analysis
 
 ## 📊 Project Overview
@@ -15,6 +18,14 @@ and pricing structures to provide actionable business recommendations.
 - **Database**: W3Schools Northwind Database
 - **Language**: SQL (MySQL)
 - **Tools**: TablePlus, GitHub for version control
+
+## 🛠️ SQL Skills Demonstrated
+- Aggregate functions (COUNT, MIN, MAX, AVG)
+- Subqueries for filtering and comparison
+- NOT IN for exclusion logic
+- GROUP BY for data aggregation
+- ORDER BY with CAST for data type handling
+- Data quality assessment and handling
 
 ## 📁 Project Structure
 ```
