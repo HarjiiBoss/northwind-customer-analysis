@@ -1,3 +1,7 @@
+-- PURPOSE:
+-- Lists all customers who have never placed an order.
+-- Helps detect inactive segments for targeted re-engagement campaigns.
+
 -- =====================================================
 -- QUESTION 5: Are there customers who have never placed an order?
 -- =====================================================
