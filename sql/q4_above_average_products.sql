@@ -1,3 +1,7 @@
+-- PURPOSE:
+-- Identifies products priced above the catalog average.
+-- Used to review premium pricing strategy and detect pricing anomalies.
+
 -- =====================================================
 -- QUESTION 4: Which products are priced above the overall average?
 -- =====================================================
