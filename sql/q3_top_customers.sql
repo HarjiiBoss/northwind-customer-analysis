@@ -1,3 +1,7 @@
+-- PURPOSE:
+-- Lists the top 10 customers by number of orders placed.
+-- Highlights high-value repeat customers and supports loyalty program decisions.
+
 -- =====================================================
 -- QUESTION 3: Who are the top 10 customers by order frequency?
 -- NOTE: Displays CustomerID instead of customer names (JOIN not yet covered)
