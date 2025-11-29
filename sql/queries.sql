@@ -31,22 +31,15 @@ LIMIT 5;
 
 /*
 INSIGHT:
-USA leads with 13 customers (25% of top 5 markets), followed by 
-Germany and France with 11 customers each (22% each). 
-
-The top 3 countries (USA, Germany, France) represent 35 customers, 
-accounting for 69% of the top 5 markets. 
-
-Brazil (9) and UK (7) show moderate presence. 
-This indicates strong market concentration in North America and Western Europe.
+USA has the highest number of customers (13), followed closely by Germany and France (11 each).
+Together, these three countries make up most of our top markets. Brazil (9) and the UK (7) trail behind, 
+showing we have a solid but regionally concentrated customer base.
 
 
 RECOMMENDATION:
-Prioritize marketing investments in the top 3 markets (USA, Germany, France) where we have proven customer base and strongest presence. 
-
-Investigate success factors in these markets (product preferences, pricing, distribution channels) and replicate in emerging markets like Brazil and UK. 
-
-Consider localized customer retention programs for top markets to maintain market leadership and prevent customer churn to competitors.
+We should continue investing in the US, Germany, and France since these markets already respond well. 
+It’s worth checking what works in these regions and applying the same approach in places like Brazil and the UK.
+Also, a retention plan for customers in the top three markets could help us stay competitive.
 */
 
 
@@ -59,20 +52,13 @@ FROM Products;
 
 /* 
 INSIGHT:
-The product catalog ranges from 10 at the low end to 97 at the high end. 
-This is a large 870 percent difference between the cheapest and most expensive product, showing a wide pricing spread.
-
-The average price is 28.87, which sits much closer to the minimum price. This tells us that most products are low to mid priced, while only a few items are in the premium range.
-This pattern suggests that the business operates mainly in a budget to mid tier market rather than a high end market.
+Prices range from 10 to 97, with an average around 29. Most products fall near the lower side of this range; only a few items are truly expensive. 
+This shows the catalog leans toward budget and mid-priced products.
 
 
 RECOMMENDATION:
-The product team should review premium priced items above 70 to confirm they justify their margin and are not overpriced relative to the rest of the catalog.
-
-Marketing and sales teams can focus promotions on the majority low to mid tier products, which are closer to the average price and likely have the highest sales volume opportunity.
-
-The business could also explore introducing more mid range or slightly higher priced items to raise the average price, 
-which could increase revenue without depending heavily on a few premium outliers.
+Review the highest-priced items to confirm their pricing makes sense.
+For the rest, small price adjustments or new mid-range items could lift overall revenue without depending on a few premium products.
 */
 
 
@@ -91,24 +77,13 @@ LIMIT 10;
 
 /* 
 INSIGHT:
-Customer ID 20 is the clear leader with 10 orders, representing the most engaged customer in our database. 
-Three customers (IDs 87, 65, and 63) follow with 7 orders each, forming a strong second tier. 
-
-The top 10 customers collectively placed 60 orders, showing significant order concentration among a small group of high-value 
-repeat customers. There's a notable decline from 10 orders (rank #1) to 4 orders (rank #10), indicating a steep drop-off in engagement beyond our most loyal customers. 
-
-This pattern suggests a small but highly engaged core customer base with opportunity to improve mid-tier customer retention.
+Customer 20 is the top buyer with 10 orders. A small group of customers makes up most repeat purchases, 
+and there’s a steep drop after the top few. This shows we rely heavily on a small core of loyal buyers.
 
 
 RECOMMENDATION:
-Implement a VIP loyalty program for the top 10 customers (IDs 20, 87, 65, 63, etc.) offering exclusive benefits such as priority support, 
-early access to new products, or volume discounts to maintain their engagement and prevent churn to competitors. 
-
-The marketing team should analyze purchase patterns of Customer 20 (10 orders) to identify success factors and replicate them with customers in the 4-7 order range 
-to move them into the top tier. 
-
-Additionally, develop a re-engagement campaign targeting customers with only 1-3 orders to understand barriers to repeat purchases and convert them into frequent 
-buyers, thereby reducing the steep drop-off we see in the current customer base.
+Create a loyalty or rewards program for the top customers to keep them engaged.
+For customers placing only a few orders, targeted follow-up or personalized offers could help move them into the high-value segment.
 */
 
 
@@ -123,19 +98,14 @@ ORDER BY Products.Price DESC;
 
 /* 
 INSIGHT:
-The results show that most products priced above the average fall in the 30 to 63 range, while Côte de Blaye (263.50), Thüringer Rostbratwurst (123.79), Mishi Kobe Niku (97.00), 
-and Sir Rodney's Marmalade (81.00) stand out as extreme outliers far above the average price of 28.87. 
-
-This suggests that the catalog is dominated by affordable mid priced products, with only a few premium items driving up the overall average. 
-The sharp difference raises questions about whether these premium prices are tied to category value, import costs, or inconsistent pricing strategy.
+Most products above the average price fall between 30 and 60. A few items, like Côte de Blaye, are extreme outliers and sit far above everything else. 
+The catalog is mostly mid-priced with a handful of premium products.
 
 
 RECOMMENDATION:
-The product team should review the top priced items, especially Côte de Blaye and Thüringer Rostbratwurst, to confirm whether their high pricing aligns with demand, cost structure, 
-and intended market positioning. 
-
-If these items truly serve a premium segment, marketing can highlight them as specialty products to capture higher margin sales. 
-For the larger group of mid priced items, the business can explore small, strategic price adjustments or bundled offers to lift revenue without disrupting the affordability of the core catalog.
+Review the premium items to confirm their price points are intentional and still competitive.
+If they’re meant to be luxury or specialty products, they may benefit from clearer marketing.
+For mid-range products, bundle offers or slight price increments could help increase overall sales.
 */
 
 
@@ -155,11 +125,10 @@ ORDER BY CAST(Customers.CustomerID AS UNSIGNED) ASC;
 
 /* 
 INSIGHT:
-There are 17 customers who have never placed an order, with the highest concentration in Europe (9 customers) and Latin America (8 customers). 
-These inactive customers represent untapped revenue potential across multiple regions.
+There are 17 customers who haven’t placed any orders. Most of them are in Europe and Latin America. These are potential customers we haven’t activated yet.
+
 
 RECOMMENDATION:
-Launch targeted re-engagement campaigns prioritized by region, focusing first on Europe and Latin America where inactive customer concentrations are highest. 
-Consider region-specific promotional offers or outreach to understand barriers to their first purchase.
+Run a re-engagement campaign focused on these regions. Consider offering discounts or asking for feedback on what prevented them from making a first purchase.
 */
 
