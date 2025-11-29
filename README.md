@@ -1,103 +1,134 @@
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-success)
 
-# Northwind Database - Customer & Product Analysis
+# Northwind Database — Customer and Product Analysis
 
 ## 📊 Project Overview
-This project analyzes the Northwind database to uncover customer distribution patterns, product pricing strategies, 
-and identify business opportunities for growth. Using SQL queries, I explored customer behavior, order frequency, 
-and pricing structures to provide actionable business recommendations.
+This project analyzes customer distribution, ordering behavior, and product pricing using the Northwind database (W3Schools). The analysis identifies customer patterns, evaluates product pricing structure, and uncovers opportunities for improving revenue and engagement.
+
+**Project:** Northwind Database — Customer and Product Analysis  
+**Author:** Taofeek Salami  
+**Date:** November 2025  
+**Database:** Northwind (W3Schools)
+
+---
 
 ## 🎯 Business Objectives
-- Identify key customer markets and concentration areas
-- Analyze product pricing strategy and catalog distribution
-- Discover high-value repeat customers
-- Find inactive customers representing untapped revenue potential
+- Identify key customer markets and concentration areas  
+- Analyze product pricing distribution and catalog structure  
+- Discover high-value repeat customers  
+- Detect inactive customers and potential re-engagement opportunities  
+
+---
 
 ## 🛠️ Technologies Used
-- **Database**: W3Schools Northwind Database
-- **Language**: SQL (MySQL)
-- **Tools**: TablePlus, GitHub for version control
+- SQL (MySQL syntax)  
+- Northwind Database (W3Schools)  
+- TablePlus  
+- GitHub for version control and documentation  
+
+---
 
 ## 🛠️ SQL Skills Demonstrated
-- Aggregate functions (COUNT, MIN, MAX, AVG)
-- Subqueries for filtering and comparison
-- NOT IN for exclusion logic
-- GROUP BY for data aggregation
-- ORDER BY with CAST for data type handling
-- Data quality assessment and handling
+- COUNT, MIN, MAX, AVG  
+- Subqueries for comparison  
+- NOT IN filtering logic  
+- GROUP BY and ORDER BY  
+- Casting text IDs for sorting  
+- Handling data quality inconsistencies  
+
+---
 
 ## 📁 Project Structure
 ```
 northwind-customer-analysis/
 │
-├── README.md                          # Project documentation
-└── queries.sql                        # Main SQL queries and analysis
+├── README.md
+│
+├── sql/
+│   ├── query1.sql
+│   ├── query2.sql
+│   ├── query3.sql
+│   ├── query4.sql
+│   └── ...
+│
+├── results/
+│   ├── query1_result.pdf
+│   ├── query2_result.pdf
+│   ├── query3_result.pdf
+│   └── ...
+│
+└── docs/
+    └── summary.md
 ```
 
-## 🔍 Key Analysis Questions
+**Note:**  
+Full query outputs (PDFs, screenshots, exported CSV/Excel files) are stored in the `/results` folder.
 
-### 1. Which 5 countries have the most customers?
-**Finding**: USA leads with 13 customers (25% of top 5), followed by Germany and France with 11 each.
+---
 
-**Business Impact**: Strong market concentration in North America and Western Europe represents 69% of top markets.
+## 🔍 Key Analysis Questions (High-Level Summary)
 
-### 2. What are the minimum, maximum, and average product prices?
-**Finding**: Pricing ranges from $10 to $263.50 with an average of $28.87, indicating a budget-to-mid-tier market focus.
+### 1. Which countries have the most customers?
+USA, Germany, and France rank highest.
 
-**Business Impact**: Product catalog is dominated by affordable items with only a few premium outliers.
+### 2. What is the product price distribution?
+Prices range widely, with an average around $29.
 
-### 3. Who are the top 10 customers by order frequency?
-**Finding**: Customer ID 20 leads with 10 orders, while top 10 customers placed 60 orders collectively.
+### 3. Who are the top customers by order frequency?
+A small group of customers accounts for most repeat orders.
 
-**Business Impact**: Small but highly engaged customer base with steep drop-off after top performers.
-
-### 4. Which products are priced above the overall average?
-**Finding**: Only a few premium products (like Côte de Blaye at $263.50) significantly exceed the $28.87 average.
-
-**Business Impact**: Pricing strategy questions whether premium items align with market positioning.
+### 4. Which products are priced above the average?
+Only a limited number of premium items exceed average product price.
 
 ### 5. Are there customers who have never placed an order?
-**Finding**: 17 inactive customers, concentrated in Europe (9) and Latin America (8).
+17 customers show no ordering activity.
 
-**Business Impact**: Untapped revenue potential across multiple regions requiring targeted re-engagement.
+---
 
-## 💡 Key Insights
-- **Market Concentration**: Top 3 countries account for 69% of customer base
-- **Pricing Strategy**: 870% spread between cheapest and most expensive products
-- **Customer Loyalty**: Significant engagement gap between top-tier and mid-tier customers
-- **Inactive Accounts**: 17 customers represent untapped revenue opportunities
+## 💡 Key Insights (Summary)
+- Strong customer concentration in USA and Western Europe  
+- Large gap between lowest and highest product prices  
+- Heavy dependence on repeat customers  
+- Multiple inactive customers represent re-engagement potential  
 
-## 🎯 Business Recommendations
+---
 
-1. **Market Investment**: Prioritize marketing in USA, Germany, and France where customer presence is strongest
+## 🎯 Business Recommendations (Summary)
+1. Prioritize marketing investment in strongest markets  
+2. Review high-priced items for market fit  
+3. Build a loyalty program for frequent buyers  
+4. Launch re-engagement campaigns for inactive customers  
+5. Expand mid-range product options  
 
-2. **Premium Product Review**: Evaluate high-priced items (>$70) to ensure pricing justification and market fit
-
-3. **VIP Loyalty Program**: Implement exclusive benefits for top 10 customers to prevent churn
-
-4. **Re-engagement Campaigns**: Launch region-specific promotions targeting 17 inactive customers in Europe and Latin America
-
-5. **Pricing Optimization**: Explore mid-range product expansion to increase average order value
+---
 
 ## 📝 Data Quality Notes
-- Text fields contain trailing whitespace (e.g., 'Germany ' not 'Germany')
-- All queries include spaces in filter conditions to handle this issue
-- CustomerID casting used for proper numerical sorting
+The dataset contains trailing whitespace in text fields (example: `'Germany '` instead of `'Germany'`).  
+Queries include these spaces intentionally:
+
+```sql
+WHERE Country = 'Germany '
+```
+
+Customer IDs are stored as text. Casting is used for proper numeric sorting.
+
+---
 
 ## 👨‍💻 Author
 **Taofeek Salami**  
 Data Analyst | SQL Enthusiast  
-November 2025
+November 2025  
 
-## 🔗 Connect With Me
-- [LinkedIn](https://www.linkedin.com/in/taofeek-salami-460a93245/)
-- [GitHub](https://github.com/HarjiiBoss)
-- [Email](mailto:salamitaofeek92@gmail.com)
-
-## 📄 License
-This project is open source and available for educational purposes.
+- LinkedIn: https://www.linkedin.com/in/taofeek-salami-460a93245/  
+- GitHub: https://github.com/HarjiiBoss  
+- Email: salamitaofeek92@gmail.com  
 
 ---
 
-*This analysis was conducted using the W3Schools Northwind sample database for learning and portfolio demonstration purposes.*
+## 📄 License
+This project is open source and available for educational use.
+
+---
+
+*This analysis uses the W3Schools Northwind sample database for learning and portfolio demonstration.*
