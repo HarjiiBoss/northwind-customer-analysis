@@ -1,3 +1,7 @@
+-- PURPOSE:
+-- Identifies the top five countries with the highest customer counts.
+-- Helps reveal geographic concentration and priority markets for sales and marketing.
+
 -- =====================================================
 -- QUESTION 1: Which 5 countries have the most customers?
 -- =====================================================
