@@ -46,24 +46,27 @@ northwind-customer-analysis/
 ├── README.md
 │
 ├── sql/
-│   ├── query1.sql
-│   ├── query2.sql
-│   ├── query3.sql
-│   ├── query4.sql
+│   ├── q1_top_countries.sql
+│   ├── q2_price_summary.sql
+│   ├── q3_top_customers.sql
+│   ├── q4_above_average_products.sql
+│   ├── q5_inactive_customers.sql
 │   └── ...
 │
 ├── results/
-│   ├── query1_result.pdf
-│   ├── query2_result.pdf
-│   ├── query3_result.pdf
+│   ├── query1_customer_distribution.pdf
+│   ├── query2_product_prices.pdf
+│   ├── query3_top_customers.pdf
+│   ├── query4_above_avg_products.pdf
+│   ├── query5_inactive_customers.pdf
 │   └── ...
 │
 └── docs/
     └── summary.md
 ```
 
-**Note:**  
-Full query outputs (PDFs, screenshots, exported CSV/Excel files) are stored in the `/results` folder.
+## 📄 Query Output Files
+All exported query results (PDF/CSV) are available in the /results directory.
 
 ---
 
