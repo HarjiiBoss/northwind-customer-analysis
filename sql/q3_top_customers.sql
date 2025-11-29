@@ -8,7 +8,7 @@
 -- =====================================================
 
 SELECT 
-    Orders.CustomerID AS 'Customer', 
+    Orders.CustomerID AS 'Customer_ID', 
     COUNT(Orders.OrderID) AS 'Number of Order'
 FROM Orders
 GROUP BY Orders.CustomerID
