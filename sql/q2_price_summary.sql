@@ -1,3 +1,7 @@
+-- PURPOSE:
+-- Calculates minimum, maximum, and average product prices.
+-- Evaluates pricing spread to understand catalog positioning and potential gaps.
+
 -- =====================================================
 -- QUESTION 2: What are the minimum, maximum, and average product prices?
 -- =====================================================
