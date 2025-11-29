@@ -1,76 +1,78 @@
 # Northwind Customer & Product Analysis — Summary Report
 
 ## Overview
-This document summarizes the key findings, insights, and recommendations from the SQL-based analysis of the Northwind database. The purpose is to provide a consolidated reference for business decisions without reviewing individual query files.
+This document summarizes the key findings, insights, and recommendations from the SQL analysis of the Northwind database. 
+It provides a high-level business interpretation without requiring a review of individual query files.
 
 ---
 
 ## 1. Customer Distribution by Country
-**Key Finding:**  
+**Finding:**  
 USA, Germany, and France have the highest customer counts.
 
 **Insight:**  
-Top three countries account for a significant share of total customers, showing strong market concentration in North America and Western Europe.
+These three countries represent a large share of the customer base, showing strong market concentration in North America and Western Europe.
 
 **Business Impact:**  
-These regions offer proven demand and should be prioritized for continued marketing and distribution investment.
+They should remain priority regions for marketing and distribution investment.
 
 ---
 
 ## 2. Product Price Analysis
-**Key Finding:**  
+**Finding:**  
 Prices range from 10 to 263.50 with an average of 28.87.
 
 **Insight:**  
-Catalog is dominated by low to mid-tier products. Only a few premium-priced outliers exist.
+The catalog is dominated by low- to mid-tier products with only a handful of premium items.
 
 **Business Impact:**  
-The business can increase revenue by expanding mid-price products and reviewing premium item justification.
+Revenue can be increased by expanding mid-priced offerings and reassessing pricing justification for premium products.
 
 ---
 
 ## 3. Top Customers by Order Frequency
-**Key Finding:**  
-Customer ID 20 is the top performer with 10 orders. Top 10 customers placed 60 total orders.
+**Finding:**  
+Customer ID 20 placed the most orders (10). The top 10 customers placed 60 orders in total.
 
 **Insight:**  
-A small group of repeat buyers contributes disproportionately to total orders.
+A small group of repeat buyers is responsible for a large share of purchase activity.
 
 **Business Impact:**  
-A loyalty program targeting these customers can improve retention and prevent revenue loss.
+A loyalty or VIP rewards program could help retain these valuable customers.
 
 ---
 
-## 4. Products Priced Above Average
-**Key Finding:**  
-Most above-average products fall between 30–63, except for four extreme premium items.
+## 4. Products Priced Above the Average
+**Finding:**  
+Most above-average products fall between 30–63, with four significantly higher-priced outliers.
 
 **Insight:**  
-Premium items significantly skew the average, suggesting potential pricing inconsistencies.
+Premium items heavily skew the overall average price.
 
 **Business Impact:**  
-Premium products should be reviewed for pricing accuracy and marketing positioning.
+Premium product pricing should be reviewed for alignment with market positioning.
 
 ---
 
 ## 5. Inactive Customers (No Orders)
-**Key Finding:**  
+**Finding:**  
 17 customers have never placed an order.
 
 **Insight:**  
-These customers represent latent revenue potential.
+These accounts represent unrealized revenue.
 
 **Business Impact:**  
-A targeted re-engagement campaign, especially in Europe and Latin America, could activate new sales.
+Targeted re-engagement campaigns, especially in Europe and Latin America could activate new sales.
 
 ---
 
 ## Data Quality Notes
-- Some text fields contain trailing spaces (e.g., `"Germany "`).  
-- Queries intentionally match fields *with* spaces.  
-- CustomerID stored as text, cast to numeric for sorting.
+- Text fields contain trailing spaces (e.g., `"Germany "`).  
+- Queries intentionally match fields including the whitespace.  
+- CustomerID is stored as text and cast for correct numeric sorting.
 
 ---
 
 ## Conclusion
-The Northwind database reveals strong regional demand patterns, pricing segmentation opportunities, and clear customer engagement tiers. Strategic marketing, pricing optimization, and customer retention efforts can significantly improve business performance.
+The analysis highlights strong geographic concentration, clear pricing tiers, and distinct customer engagement patterns. 
+Optimizing pricing, strengthening retention strategies, and activating inactive customers can significantly improve business performance.
