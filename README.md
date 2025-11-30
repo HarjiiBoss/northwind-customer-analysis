@@ -4,7 +4,8 @@
 # Northwind Database — Customer and Product Analysis
 
 ## 📊 Project Overview
-This project analyzes customer distribution, ordering behavior, and product pricing using the Northwind database (W3Schools). The analysis identifies customer patterns, evaluates product pricing structure, and uncovers opportunities for improving revenue and engagement.
+This project analyzes customer distribution, ordering behavior, and product pricing using the Northwind database (W3Schools). 
+The analysis identifies customer patterns, evaluates product pricing structure, and uncovers opportunities for improving revenue and engagement.
 
 **Project:** Northwind Database — Customer and Product Analysis  
 **Author:** Taofeek Salami  
