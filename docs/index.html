@@ -20,7 +20,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -32,7 +31,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -43,7 +41,6 @@
       opacity: 0.4;
     }
 
-    /* ── HERO ── */
     header {
       position: relative;
       min-height: 100vh;
@@ -140,7 +137,6 @@
       background: var(--muted);
     }
 
-    /* ── LAYOUT ── */
     main { position: relative; z-index: 1; }
 
     section {
@@ -165,7 +161,6 @@
       line-height: 1.2;
     }
 
-    /* ── FINDINGS GRID ── */
     .findings-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -223,12 +218,7 @@
     .finding-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
     .finding-text strong { color: var(--text); font-weight: 500; }
 
-    /* ── SQL SECTION ── */
-    .sql-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+    .sql-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 
     .sql-card {
       background: var(--surface);
@@ -249,23 +239,9 @@
     }
 
     .sql-header-left { display: flex; align-items: center; gap: 1rem; }
-
-    .sql-filename {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--accent2);
-    }
-
+    .sql-filename { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--accent2); }
     .sql-purpose { font-size: 0.85rem; color: var(--muted); }
-
-    .sql-toggle {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-
+    .sql-toggle { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; transition: color 0.2s; }
     .sql-header:hover .sql-toggle { color: var(--accent); }
 
     .sql-body { display: none; }
@@ -280,7 +256,6 @@
       color: #abb2bf;
     }
 
-    /* Syntax highlight classes */
     .kw { color: #c678dd; }
     .fn { color: #61afef; }
     .cm { color: #5c6370; font-style: italic; }
@@ -288,7 +263,6 @@
     .num { color: #d19a66; }
     .op { color: #56b6c2; }
 
-    /* ── STATS BAR ── */
     .stats-bar {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -324,7 +298,6 @@
       color: var(--muted);
     }
 
-    /* ── CONCLUSION ── */
     .conclusion-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -338,14 +311,7 @@
 
     .conclusion-box strong { color: var(--text); font-weight: 500; }
 
-    /* ── DATA QUALITY ── */
-    .dq-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      max-width: 600px;
-    }
+    .dq-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; max-width: 600px; }
 
     .dq-list li {
       display: flex;
@@ -381,7 +347,6 @@
       color: var(--accent2);
     }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 8vw;
@@ -392,41 +357,20 @@
       gap: 1rem;
     }
 
-    .footer-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--accent);
-    }
+    .footer-name { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--accent); }
+    .footer-note { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
-    .footer-note {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
   </style>
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
 <header>
   <div class="badge-row">
     <span class="badge badge-sql">SQL</span>
@@ -434,7 +378,8 @@
     <span class="badge badge-complete">Complete</span>
   </div>
   <h1>Northwind<br/><span>Customer & Product</span><br/>Analysis</h1>
-  <p class="hero-desc">A structured SQL analysis of customer behaviour, pricing patterns, and market concentration using the Northwind database.</p>
+  <!-- ✏️ CHANGE 1: Updated hero description to business-focused framing -->
+  <p class="hero-desc">A business-focused SQL analysis evaluating customer concentration risk, pricing imbalance, and revenue dependency within a wholesale distribution environment.</p>
   <div class="hero-meta">
     <div class="meta-item">
       <span class="meta-label">Queries</span>
@@ -458,9 +403,9 @@
 
 <main>
 
-  <!-- ═══ KEY STATS ═══ -->
   <section>
-    <div class="section-label">At a glance</div>
+    <!-- ✏️ CHANGE 2: Updated section label from "At a glance" to "Business Overview" -->
+    <div class="section-label">Business Overview</div>
     <div class="stats-bar reveal">
       <div class="stat"><div class="stat-number">13</div><div class="stat-label">Top country customers (USA)</div></div>
       <div class="stat"><div class="stat-number">$29</div><div class="stat-label">Avg product price</div></div>
@@ -470,7 +415,6 @@
     </div>
   </section>
 
-  <!-- ═══ FINDINGS ═══ -->
   <section>
     <div class="section-label">Key Findings</div>
     <h2>What the data reveals</h2>
@@ -565,7 +509,6 @@
     </div>
   </section>
 
-  <!-- ═══ SQL QUERIES ═══ -->
   <section>
     <div class="section-label">SQL Queries</div>
     <h2>The code behind the analysis</h2>
@@ -670,7 +613,6 @@
     </div>
   </section>
 
-  <!-- ═══ DATA QUALITY ═══ -->
   <section>
     <div class="section-label">Data Quality Notes</div>
     <h2>Known issues & handling</h2>
@@ -681,7 +623,6 @@
     </ul>
   </section>
 
-  <!-- ═══ CONCLUSION ═══ -->
   <section>
     <div class="section-label">Conclusion</div>
     <h2>Summary & next steps</h2>
@@ -694,14 +635,12 @@
 
 </main>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
   <span class="footer-name">HarjiiBoss</span>
   <span class="footer-note">Northwind DB — Customer & Product Analysis · MySQL · 2025</span>
 </footer>
 
 <script>
-  // Toggle SQL blocks
   function toggleSQL(header) {
     const body = header.nextElementSibling;
     const toggle = header.querySelector('.sql-toggle');
@@ -710,13 +649,9 @@
     toggle.textContent = isOpen ? '▶ expand' : '▼ collapse';
   }
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
 
