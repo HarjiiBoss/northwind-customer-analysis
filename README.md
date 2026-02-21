@@ -142,8 +142,8 @@ Customer IDs are stored as text. Casting is used for proper numeric sorting.
 ## Contact
 
 Taofeek Salami  
-LinkedIn: https://www.linkedin.com/in/taofeek-salami-460a93245/
-GitHub: https://github.com/HarjiiBoss
+LinkedIn: https://www.linkedin.com/in/taofeek-salami-460a93245/  
+GitHub: https://github.com/HarjiiBoss  
 Email: salamitaofeek92@gmail.com
 
 ---
