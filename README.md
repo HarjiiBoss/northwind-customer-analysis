@@ -1,28 +1,83 @@
-![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
-![Status](https://img.shields.io/badge/Status-Complete-success)
+# Northwind Database — Customer and Product Performance Analysis
 
-# Northwind Database — Customer and Product Analysis
+## Executive Summary
 
-## 📊 Project Overview
-This project analyzes customer distribution, ordering behavior, and product pricing using the Northwind database (W3Schools). 
-The analysis identifies customer patterns, evaluates product pricing structure, and uncovers opportunities for improving revenue and engagement.
+This project evaluates customer concentration, product pricing structure, and revenue risk within a wholesale distribution environment modeled by the Northwind dataset.
 
-**Project:** Northwind Database — Customer and Product Analysis  
-**Author:** Taofeek Salami  
-**Date:** November 2025  
-**Database:** Northwind (W3Schools)
+The objective was to identify:
+- Market concentration risk
+- Revenue dependency on repeat customers
+- Pricing distribution imbalance
+- Inactive customers representing potential revenue recovery
 
----
-
-## 🎯 Business Objectives
-- Identify key customer markets and concentration areas  
-- Analyze product pricing distribution and catalog structure  
-- Discover high-value repeat customers  
-- Detect inactive customers and potential re-engagement opportunities  
+Using structured SQL analysis, the project surfaces actionable business insights rather than raw query outputs.
 
 ---
 
-## 🛠️ Technologies Used
+## Business Context
+
+The Northwind dataset simulates a wholesale distribution company managing customers, orders, and product inventory across multiple countries.
+
+For a business operating in this environment, understanding customer concentration, pricing structure, and revenue dependency is critical for sustainable growth.
+
+This analysis evaluates potential concentration risks, revenue leakage, and pricing imbalances that could impact long-term profitability.
+
+---
+
+## Business Questions
+
+1. Is revenue concentrated in specific geographic markets?
+2. Does the pricing structure create product portfolio imbalance?
+3. How dependent is revenue on repeat customers?
+4. Are there inactive customers representing revenue leakage?
+
+---
+
+## Analysis Approach
+
+The analysis was conducted using structured SQL queries across customer, order, and product tables.
+
+Each business question was translated into:
+- Aggregation analysis for distribution patterns
+- Subqueries for comparative evaluation
+- Join operations for relational insights
+- Filtering logic to identify inactivity and anomalies
+
+Query outputs were interpreted to derive business meaning beyond numerical results.
+
+---
+
+## Key Findings
+
+- Customer concentration is heavily weighted toward the USA and Western Europe, indicating geographic dependency.
+- Product pricing shows significant variance, with a small number of premium items skewing the overall average.
+- Revenue appears concentrated among a small group of repeat buyers.
+- 17 customers have never placed an order, representing potential revenue recovery opportunities.
+
+---
+
+## Business Implications
+
+- Heavy geographic concentration may expose the business to regional economic risk.
+- Revenue dependency on repeat customers increases vulnerability if key accounts are lost.
+- Pricing skew suggests potential portfolio imbalance and perceived value gaps.
+- Inactive customers indicate missed revenue opportunities and inefficient customer lifecycle management.
+
+---
+
+## Recommendations
+
+1. Diversify customer acquisition efforts beyond dominant geographic markets to reduce concentration risk.
+2. Implement structured retention programs targeting high-frequency customers.
+3. Reassess premium product positioning and pricing elasticity.
+4. Launch targeted re-engagement campaigns for inactive customers.
+5. Evaluate mid-tier product expansion to stabilize pricing distribution.
+
+---
+
+## Technical Appendix
+
+### 🛠️ Technologies Used
 - SQL (MySQL syntax)  
 - Northwind Database (W3Schools)  
 - TablePlus  
@@ -30,7 +85,7 @@ The analysis identifies customer patterns, evaluates product pricing structure, 
 
 ---
 
-## 🛠️ SQL Skills Demonstrated
+### 🛠️ SQL Skills Demonstrated
 - COUNT, MIN, MAX, AVG  
 - Subqueries for comparison  
 - NOT IN filtering logic  
@@ -40,7 +95,7 @@ The analysis identifies customer patterns, evaluates product pricing structure, 
 
 ---
 
-## 📁 Project Structure
+### 📁 Project Structure
 ```
 northwind-customer-analysis/
 │
@@ -66,48 +121,13 @@ northwind-customer-analysis/
     └── summary.md
 ```
 
-## 📄 Query Output Files
+### 📄 Query Output Files
 All exported query results (PDF/CSV) are available in the /results directory.
 
 ---
 
-## 🔍 Key Analysis Questions (High-Level Summary)
 
-### 1. Which countries have the most customers?
-USA, Germany, and France rank highest.
-
-### 2. What is the product price distribution?
-Prices range widely, with an average around $29.
-
-### 3. Who are the top customers by order frequency?
-A small group of customers accounts for most repeat orders.
-
-### 4. Which products are priced above the average?
-Only a limited number of premium items exceed average product price.
-
-### 5. Are there customers who have never placed an order?
-17 customers show no ordering activity.
-
----
-
-## 💡 Key Insights (Summary)
-- Strong customer concentration in USA and Western Europe  
-- Large gap between lowest and highest product prices  
-- Heavy dependence on repeat customers  
-- Multiple inactive customers represent re-engagement potential  
-
----
-
-## 🎯 Business Recommendations (Summary)
-1. Prioritize marketing investment in strongest markets  
-2. Review high-priced items for market fit  
-3. Build a loyalty program for frequent buyers  
-4. Launch re-engagement campaigns for inactive customers  
-5. Expand mid-range product options  
-
----
-
-## 📝 Data Quality Notes
+### 📝 Data Quality Notes
 The dataset contains trailing whitespace in text fields (example: `'Germany '` instead of `'Germany'`).  
 Queries include these spaces intentionally:
 
@@ -119,20 +139,15 @@ Customer IDs are stored as text. Casting is used for proper numeric sorting.
 
 ---
 
-## 👨‍💻 Author
-**Taofeek Salami**  
-Data Analyst | SQL Enthusiast  
-November 2025  
+## Contact
 
-- LinkedIn: https://www.linkedin.com/in/taofeek-salami-460a93245/  
-- GitHub: https://github.com/HarjiiBoss  
-- Email: salamitaofeek92@gmail.com  
+Taofeek Salami  
+LinkedIn: https://www.linkedin.com/in/taofeek-salami-460a93245/
+GitHub: https://github.com/HarjiiBoss
+Email: salamitaofeek92@gmail.com
 
 ---
 
-## 📄 License
-This project is open source and available for educational use.
+## License
+This project is licensed under the MIT License.
 
----
-
-*This analysis uses the W3Schools Northwind sample database for learning and portfolio demonstration.*
