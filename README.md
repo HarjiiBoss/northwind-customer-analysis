@@ -4,13 +4,27 @@
 
 This project evaluates customer concentration, product pricing structure, and revenue risk within a wholesale distribution environment modeled by the Northwind dataset.
 
-The objective was to identify:
-- Market concentration risk
-- Revenue dependency on repeat customers
-- Pricing distribution imbalance
-- Inactive customers representing potential revenue recovery
-
 Using structured SQL analysis, the project surfaces actionable business insights rather than raw query outputs.
+
+---
+
+## Performance Snapshot
+
+- Top 5 countries account for 56% of total customers
+- USA alone represents 14.3% of the customer base
+- A small group of repeat customers contributes a disproportionate share of total orders
+- Premium-priced products significantly skew average price distribution
+- 17 customers have never placed an order
+
+---
+
+## Objective
+
+The analysis was designed to determine:
+- Whether customer revenue is geographically concentrated
+- The extent of revenue dependency on repeat customers
+- Whether pricing distribution creates portfolio imbalance
+- The scale of inactive customers representing potential revenue recovery
 
 ---
 
@@ -49,7 +63,8 @@ Query outputs were interpreted to derive business meaning beyond numerical resul
 
 ## Key Findings
 
-- Customer concentration is heavily weighted toward the USA and Western Europe, indicating geographic dependency.
+- USA has 13 customers, followed by Germany and France with 11 each.
+- The top five countries collectively account for 51 of 91 total customers, confirming geographic concentration.
 - Product pricing shows significant variance, with a small number of premium items skewing the overall average.
 - Revenue appears concentrated among a small group of repeat buyers.
 - 17 customers have never placed an order, representing potential revenue recovery opportunities.
