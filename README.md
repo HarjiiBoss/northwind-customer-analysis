@@ -75,7 +75,7 @@ Query outputs were interpreted to derive business meaning beyond numerical resul
 
 ---
 
-## Technical Appendix
+## Methodology & Tools
 
 ### 🛠️ Technologies Used
 - SQL (MySQL syntax)  
