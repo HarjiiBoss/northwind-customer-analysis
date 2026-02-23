@@ -92,7 +92,7 @@ Query outputs were interpreted to derive business meaning beyond numerical resul
 
 ## Methodology & Tools
 
-### 🛠️ Technologies Used
+### Technologies Used
 - SQL (MySQL syntax)  
 - Northwind Database (W3Schools)  
 - TablePlus  
@@ -100,7 +100,7 @@ Query outputs were interpreted to derive business meaning beyond numerical resul
 
 ---
 
-### 🛠️ SQL Skills Demonstrated
+### SQL Skills Demonstrated
 - COUNT, MIN, MAX, AVG  
 - Subqueries for comparison  
 - NOT IN filtering logic  
