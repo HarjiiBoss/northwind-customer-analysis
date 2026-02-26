@@ -347,6 +347,30 @@
       color: var(--accent2);
     }
 
+    .hero-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.hero-link::before { content: '→'; color: var(--accent); }
+.hero-link:hover { color: var(--accent); }
+    
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 8vw;
