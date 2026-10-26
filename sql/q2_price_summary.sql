@@ -11,7 +11,7 @@ FROM Products;
 
 /* 
 INSIGHT:
-Prices range from 10 to 97, with an average around 29. Most products fall near the lower side of this range; only a few items are truly expensive. 
+Prices range from 2.50 to 263.50, with an average of 28.87 (all products, no exclusions). Most products fall near the lower side of this range; only a few items are truly expensive. 
 This shows the catalog leans toward budget and mid-priced products.
 
 

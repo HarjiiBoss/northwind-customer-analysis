@@ -18,7 +18,7 @@ ORDER BY CAST(Customers.CustomerID AS UNSIGNED) ASC;
 
 /* 
 INSIGHT:
-There are 17 customers who haven’t placed any orders. Most of them are in Europe and Latin America. These are potential customers we haven’t activated yet.
+There are 17 customers who haven’t placed any orders. Nine are in Europe, six in North America (five in the USA) and two in Argentina. These are potential customers we haven’t activated yet.
 
 
 RECOMMENDATION:

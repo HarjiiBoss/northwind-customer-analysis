@@ -17,8 +17,8 @@ LIMIT 10;
 
 /* 
 INSIGHT:
-Customer 20 is the top buyer with 10 orders. A small group of customers makes up most repeat purchases, 
-and there’s a steep drop after the top few. This shows we rely heavily on a small core of loyal buyers.
+Customer 20 is the top buyer with 10 orders. The top 10 customers placed 62 orders between them; 
+after customer 20, the next three placed 7 each, so order counts fall gradually rather than steeply.
 
 
 RECOMMENDATION:
