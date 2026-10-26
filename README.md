@@ -22,9 +22,9 @@ Using structured SQL analysis, the project surfaces actionable business insights
 
 The analysis was designed to determine:
 - Whether customer revenue is geographically concentrated
-- The extent of revenue dependency on repeat customers
+- How concentrated orders are among repeat customers
 - Whether pricing distribution creates portfolio imbalance
-- The scale of inactive customers representing potential revenue recovery
+- How many registered customers have never ordered
 
 ---
 
@@ -40,10 +40,10 @@ This analysis evaluates potential concentration risks, revenue leakage, and pric
 
 ## Business Questions
 
-1. Is revenue concentrated in specific geographic markets?
+1. Are customers concentrated in specific geographic markets?
 2. Does the pricing structure create product portfolio imbalance?
-3. How dependent is revenue on repeat customers?
-4. Are there inactive customers representing revenue leakage?
+3. How concentrated are orders among repeat customers?
+4. Are there customers who have never placed an order?
 
 ---
 
@@ -54,7 +54,6 @@ The analysis was conducted using structured SQL queries across customer, order, 
 Each business question was translated into:
 - Aggregation analysis for distribution patterns
 - Subqueries for comparative evaluation
-- Join operations for relational insights
 - Filtering logic to identify inactivity and anomalies
 
 Query outputs were interpreted to derive business meaning beyond numerical results.
@@ -65,18 +64,18 @@ Query outputs were interpreted to derive business meaning beyond numerical resul
 
 - USA has 13 customers, followed by Germany and France with 11 each.
 - The top five countries collectively account for 51 of 91 total customers, confirming geographic concentration.
-- Product pricing shows significant variance, with a small number of premium items skewing the overall average.
-- Revenue appears concentrated among a small group of repeat buyers.
-- 17 customers have never placed an order, representing potential revenue recovery opportunities.
+- Prices range from $2.50 to $263.50 (average $28.87); a small number of premium items, led by Côte de Blaye at $263.50, raise the average.
+- The top 10 customers placed 62 orders; customer #20 placed the most (10). Revenue per customer was not calculated.
+- 17 customers have never placed an order: nine in Europe, six in North America and two in Argentina.
 
 ---
 
 ## Business Implications
 
 - Heavy geographic concentration may expose the business to regional economic risk.
-- Revenue dependency on repeat customers increases vulnerability if key accounts are lost.
-- Pricing skew suggests potential portfolio imbalance and perceived value gaps.
-- Inactive customers indicate missed revenue opportunities and inefficient customer lifecycle management.
+- Order concentration among repeat customers increases vulnerability if key accounts are lost.
+- A few premium items raise the average price, so the average describes the catalogue poorly; the median would be a better summary.
+- 17 registered customers have never ordered; the data does not show why.
 
 ---
 
