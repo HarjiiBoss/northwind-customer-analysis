@@ -17,5 +17,5 @@ This shows the catalog leans toward budget and mid-priced products.
 
 RECOMMENDATION:
 Review the highest-priced items to confirm their pricing makes sense.
-For the rest, small price adjustments or new mid-range items could lift overall revenue without depending on a few premium products.
+Sales by product were not analysed, so the effect of price changes or new mid-range items on revenue is not known.
 */

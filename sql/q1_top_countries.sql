@@ -20,7 +20,6 @@ showing we have a solid but regionally concentrated customer base.
 
 
 RECOMMENDATION:
-We should continue investing in the US, Germany, and France since these markets already respond well. 
-It’s worth checking what works in these regions and applying the same approach in places like Brazil and the UK.
-Also, a retention plan for customers in the top three markets could help us stay competitive.
+Treat the US, Germany and France as core markets. The query counts customers only, so it does not show
+how well each market responds; compare orders and sales by country before moving budget to Brazil or the UK.
 */
