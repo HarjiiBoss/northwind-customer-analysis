@@ -1,0 +1,7 @@
+# .figures-allow — figures checked by hand that tools/check_figures.py cannot find in the outputs.
+# One figure per line, written as it appears in the text, then '#' and how it was derived.
+# List a figure only after checking the calculation. A typed or drifted figure is fixed, not listed.
+
+56%      # query1: top five countries 13 + 11 + 11 + 9 + 7 = 51 customers; 51 / 91 = 56.0%
+14.3%    # query1: USA 13 / 91 customers = 14.29%
+$60      # query4: 20 of the 25 above-average products are priced between $30 and $60; five are above $60 (263.50, 123.79, 97.00, 81.00, 62.50)
